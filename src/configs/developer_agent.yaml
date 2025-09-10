@@ -1,0 +1,53 @@
+agent:
+  name: "developer_agent"
+  role: "AI Software Engineer"
+  description: "Autonomous developer for code writing and project management"
+  version: "1.0.0"
+  
+tools:
+  - filesystem_mcp
+  - git_mcp
+  
+capabilities:
+  - write_code
+  - edit_files
+  - manage_git
+  - create_documentation
+  - syntax_verification
+  - error_handling
+  
+constraints:
+  verify_before_write: true
+  max_file_size: 100000
+  allowed_extensions:
+    - .py
+    - .js
+    - .ts
+    - .jsx
+    - .tsx
+    - .md
+    - .yaml
+    - .yml
+    - .json
+    - .txt
+    - .sh
+    - .bash
+    - .css
+    - .html
+    - .xml
+    - .toml
+    - .ini
+    - .cfg
+    - .conf
+  
+behavior:
+  always_read_before_edit: true
+  create_backups: true
+  use_descriptive_commits: true
+  test_when_possible: true
+  report_errors_clearly: true
+  
+memory:
+  location: "memory/dev/"
+  persist_context: true
+  max_history: 100
