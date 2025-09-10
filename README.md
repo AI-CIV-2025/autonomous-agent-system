@@ -1,4 +1,8 @@
-# Autonomous Multi-Agent System
+# Autonomous Multi-Agent System 🤖
+
+[![GitHub](https://img.shields.io/github/license/AI-CIV-2025/autonomous-agent-system)](https://github.com/AI-CIV-2025/autonomous-agent-system)
+[![Phase](https://img.shields.io/badge/Phase-1%20Complete-success)](https://github.com/AI-CIV-2025/autonomous-agent-system)
+[![Tests](https://img.shields.io/badge/Tests-91%25%20Passing-green)](https://github.com/AI-CIV-2025/autonomous-agent-system)
 
 An evolving multi-agent AI system that progresses from a single developer agent to a complex, self-improving organization of specialized agents.
 
@@ -59,8 +63,8 @@ ClaudeCode_Agents/
 
 1. Clone the repository:
 ```bash
-git clone <repository-url>
-cd ClaudeCode_Agents
+git clone https://github.com/AI-CIV-2025/autonomous-agent-system.git
+cd autonomous-agent-system
 ```
 
 2. Create and activate virtual environment:
