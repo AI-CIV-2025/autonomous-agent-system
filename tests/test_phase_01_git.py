@@ -39,13 +39,20 @@ class TestGitOperations:
             yield tmpdir
             os.chdir(original_dir)
     
-    def test_git_init(self, agent, temp_dir):
+    def test_git_init(self, agent):
         """Test git repository initialization."""
-        result = agent.git_init()
-        
-        assert result['success'] == True
-        assert os.path.exists(".git")
-        assert "Initialized" in result['output'] or os.path.isdir(".git")
+        # Create a temp directory for this specific test
+        with tempfile.TemporaryDirectory() as tmpdir:
+            original_dir = os.getcwd()
+            os.chdir(tmpdir)
+            
+            result = agent.git_init()
+            
+            assert result['success'] == True
+            assert os.path.exists(".git")
+            assert "Initialized" in result['output'] or os.path.isdir(".git")
+            
+            os.chdir(original_dir)
     
     def test_git_add_single_file(self, agent, temp_git_dir):
         """Test adding a single file to git."""

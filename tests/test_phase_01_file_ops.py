@@ -89,7 +89,7 @@ class TestFileOperations:
         agent.write_code("test_backup.txt", new_content)
         
         # Check that backup was created
-        backup_dir = Path("memory/dev/backups")
+        backup_dir = agent.backup_dir  # Use agent's backup dir
         assert backup_dir.exists()
         
         backups = list(backup_dir.glob("test_backup_*.txt"))

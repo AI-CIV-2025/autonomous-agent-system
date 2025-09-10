@@ -255,6 +255,9 @@ def test_divide():
     
     def test_memory_persistence(self, agent, temp_workspace):
         """Test agent's memory system."""
+        # Ensure memory directory exists
+        agent.memory_path.mkdir(parents=True, exist_ok=True)
+        
         # Save some information
         agent.save_memory("project_name", "test_project")
         agent.save_memory("version", "1.0.0")
